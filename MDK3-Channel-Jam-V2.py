@@ -7,9 +7,13 @@ time.sleep(1)
 os.system("clear")
 
 # Print banner
-print("-" * 30)
-print("[ - MDK3 Channel Jammer - ]")
-print("-" * 30 + "\n")
+print("-" * 60)
+print("          [ - MDK3 Channel Jammer - ]")
+print("! Code was created by Fattcat for Tp_Link Archer C7 v5 personal usage !")
+print("Checkout my GitHub Repo --> github.com/Fattcat")
+print("Checkout my YouTube --> https://www.youtube.com/channel/UCKfToKJFq-uvI8svPX0WzYQ")
+print("! DONT USE THIS CODE FOR BAD HACKING or WITHOUT PERMISSIONS !")
+print("-" * 60 + "\n")
 
 print("Checking if script was started with sudo ...")
 
