@@ -11,13 +11,13 @@ print("-" * 30)
 print("[ - MDK3 Channel Jammer - ]")
 print("-" * 30 + "\n")
 
-# Check if script was started with sudo (commented out for now)
-# def CheckSudo():
-#     if os.geteuid() != 0:
-#         print("Script was NOT started with sudo. Please start script with sudo.")
-#         exit()
-#     else:
-#         print("Script was started with sudo. Continuing...")
+Check if script was started with sudo (commented out for now)
+ def CheckSudo():
+     if os.geteuid() != 0:
+         print("Script was NOT started with sudo. Please start script with sudo.")
+         exit()
+     else:
+         print("Script was started with sudo. Continuing...")
 
 # -------------------- FUNCTION DEFINITIONS --------------------
 
@@ -46,7 +46,7 @@ def JamChanToChan(first_channel, second_channel):
 
 # -------------------- FUNCTION DEFINITIONS END --------------------
 
-#CheckSudo()
+CheckSudo()
 
 adapter = "wlan1mon"
 
