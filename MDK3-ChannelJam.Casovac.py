@@ -2,6 +2,10 @@ import time
 import subprocess
 import os
 
+# [+] (-------------------------) [+]
+# [+] (- MDK3 - Channel Jammer -) [+]
+# [+] (-------------------------) [+]
+
 # Clear screen and wait briefly
 time.sleep(1)
 os.system("clear")
@@ -62,7 +66,7 @@ def jam_specific_channel():
         total_time = time.time() - start_time
         minutes = int(total_time // 60)
         seconds = int(total_time % 60)
-        print(f"\nScript was running for {minutes} min {seconds} sec.")
+        print "\nScript was running for {0} min {1} sec.".format(minutes, seconds)
 
 def jam_channel_range(first_channel, second_channel):
     start_time = time.time()
@@ -78,7 +82,7 @@ def jam_channel_range(first_channel, second_channel):
         total_time = time.time() - start_time
         minutes = int(total_time // 60)
         seconds = int(total_time % 60)
-        print(f"\nScript was running for {minutes} min {seconds} sec.")
+        print "\nScript was running for {0} min {1} sec.".format(minutes, seconds)
 
 def jam_all_channels():
     start_time = time.time()
@@ -94,7 +98,7 @@ def jam_all_channels():
         total_time = time.time() - start_time
         minutes = int(total_time // 60)
         seconds = int(total_time % 60)
-        print(f"\nScript was running for {minutes} min {seconds} sec.")
+        print "\nScript was running for {0} min {1} sec.".format(minutes, seconds)
 
 # Check if the script was started with sudo
 check_sudo()
