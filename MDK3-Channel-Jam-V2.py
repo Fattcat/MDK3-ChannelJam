@@ -40,7 +40,7 @@ def get_current_channel():
     for line in result.splitlines():
         if "channel" in line:
             return int(line.split()[1])
-            SearchedChannel = int(line.slpit()[1])
+            SearchedChannel = int(line.split()[1])
             print "Current CH is : " + SearchedChannel + "\n"
     return None
 
