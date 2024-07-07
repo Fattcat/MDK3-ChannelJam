@@ -39,9 +39,9 @@ def get_current_channel():
     result = subprocess.check_output(["iw", "dev", adapter, "info"])
     for line in result.splitlines():
         if "channel" in line:
-            return int(line.split()[1])
             SearchedChannel = int(line.split()[1])
             print "Current CH is : " + SearchedChannel + "\n"
+            return int(line.split()[1])
     return None
 
 def set_channel(channel):
@@ -56,6 +56,8 @@ def jam_specific_channel():
         set_channel(channel)
         process = subprocess.Popen(["mdk3", adapter, "d", "-c", str(channel)])
         time.sleep(10)
+        print "Terminating MDK3 process !\n"
+        time.sleep(1)
         process.terminate()
         time.sleep(3)
 
