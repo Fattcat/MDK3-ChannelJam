@@ -8,13 +8,18 @@ Jam Jam Jam - Yummi
 
 # [- Installation -]
 
-- 1. Clone repo using git
+- 1 Clone repo using git
 ```
 git clone https://github.com/Fattcat/MDK3-ChannelJam.git
+
+- 2 cd to folder
 ```
-- 2. Start script
+cd MDK3-ChannelJam
+```
+```
+- 3 Start script
 ```
 sudo python MDK3-ChannelJam.py
 ```
-- 3. Follow instructions in script.
+- INFO. Follow instructions in script.
 - U now good to go thats all.
