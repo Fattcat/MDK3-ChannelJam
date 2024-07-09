@@ -12,12 +12,16 @@ Jam Jam Jam - Yummi
 ```
 git clone https://github.com/Fattcat/MDK3-ChannelJam.git
 
+```
 - 2 cd to folder
 ```
 cd MDK3-ChannelJam
 ```
+
 ```
 - 3 Start script
+```
+
 ```
 sudo python MDK3-ChannelJam.py
 ```
