@@ -19,7 +19,7 @@ cd MDK3-ChannelJam
 - 3 Start script
 
 ```
-sudo python MDK3-ChannelJam.py
+sudo python MDK3-Channel-Jam-V2.py
 ```
 - INFO. Follow instructions in script.
 - U now good to go thats all.
