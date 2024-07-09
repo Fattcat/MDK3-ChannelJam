@@ -5,3 +5,16 @@ Jam Jam Jam - Yummi
 - v2 Script is written in Python 2.7
 - pls give me STAR on this GitHub Repo
 # ! USE ONLY WITH PERMISSION !
+
+# [- Installation -]
+
+- 1. Clone repo using git
+```
+git clone https://github.com/Fattcat/MDK3-ChannelJam.git
+```
+- 2. Start script
+```
+sudo python MDK3-ChannelJam.py
+```
+- 3. Follow instructions in script.
+- U now good to go thats all.
