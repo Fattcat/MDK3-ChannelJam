@@ -26,10 +26,15 @@ sudo python MDK3-Channel-Jam-V2.py
 ```
 ## 📌 INFO
 - Follow instructions in script.
+- By using this script u accepted with legal usage abd terms.
+- Script was created FOR ECUCATIONAL PURPOSES ONLLY.
 - U now good to go thats all.
 
 ## 📥 UPDATES 📥
+- Added stable code path for establish functionality without showing ErrorCode
+- Fixed broken code path that was in continuing inside loop (looped error).
 
 ## 🚀 Going to be added 🚀
 - 5 GHz Deauth function
-- and lot if more ...
+- Support for more adapters
+- and lot of more ...
